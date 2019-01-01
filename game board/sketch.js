@@ -18,12 +18,17 @@ function draw() {
 function gamePath(){
   noFill();
   strokeWeight(4);
-  push();
-    translate(0,windowHeight);
+  // push();
+  //   translate(0,windowHeight);
       beginShape();
         vertex(0,3*windowHeight/4);
         vertex(windowWidth/2,3*windowHeight/4);
         vertex(windowWidth/2,windowHeight);
+      endShape();
+      beginShape();
+        vertex(0,5*windowHeight/8);
+        vertex(windowWidth/2,5*windowHeight/8);
+        vertex(windowWidth/2,0);
       endShape();
       beginShape();
         vertex(3*windowWidth/4,windowHeight);
@@ -42,7 +47,7 @@ function gamePath(){
         vertex(5*windowWidth/8,windowHeight/8);
         vertex(11*windowWidth/16,0);
       endShape();
-  pop();
+  // pop();
 }
  function wheresMyMouse(){
 push();
