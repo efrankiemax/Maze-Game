@@ -45,12 +45,15 @@ function gamePath(){
   pop();
 }
  function wheresMyMouse(){
+push();
+translate(0,windowHeight);
   strokeWeight(1);
   fill(255);
-  rect(3*windowWidth/4,50,300,100);
+  rect(3*windowWidth/4+30,50,300,100);
   fill(0);
   scale(5.0);
   text(mouseX +',' + mouseY,3*windowWidth/20+10,24);
   scale(0.2);
+  pop();
 
 }
