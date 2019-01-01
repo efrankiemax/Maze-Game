@@ -12,7 +12,7 @@ function draw() {
   gamePath();
 }
  }
-
+if ((mouseX == gamePath)&&(mouseY == gamepath))
 function gamePath(){
   fill(255);
   strokeWeight(4);
