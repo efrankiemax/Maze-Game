@@ -1,11 +1,11 @@
-let x;
-let y;
-let w;
-let p=10;
+// let x;
+// let y;
+// let w;
+//let p=10;
 
 function setup(){
 	createCanvas(windowWidth,windowHeight);
-	background(250);
+	background(255);
 		// let z = new player(windowWidth/2,windowHeight/2);
 		// players.push(z);
 		// console.log(players);
@@ -13,29 +13,24 @@ function setup(){
 
 function draw(){
 background(255);
-let x=windowWidth/2-100;
-let y=0;
-let w=200;
-let p = 10;
-	fill(0,255,0);
-		rect(x,y,w,w);
-		if(mouseX>=x && mouseX<=x+w && mouseY>=y && mouseY<=y+w){
-			print('I work')
-			fill(255,0,0);
-				rect(x,y,w,w);
-			p = p-1
-		}
-	// loosePoints();
+// let x=windowWidth/2-100;
+// let y=0;
+// let w=200;
+// let p = 10;
+// 	fill(0,255,0);
+// 		rect(x,y,w,w);
+// 	if(mouseX>=x && mouseX<=x+w && mouseY>=y && mouseY<=y+w){
+// 		fill(255,0,0);
+// 			rect(x,y,w,w);
+// 			// 		for (let i = 0; i < 10; i++) {
+// 			// p = p-1
+// 	}
+		grandure();
 	// for (let i = 0; i < players.length; i++) {
 	// 	players[i].drawPlayer();
   //   players[i].movePlayer();
 	// 	players[i].diePlayer();
   // }
-fill(255)
-rect(0,0,300,150)
-textSize(100);
-fill(0);
-text(p,50,100);
 }
 
 
@@ -96,3 +91,16 @@ text(p,50,100);
 // 		p = p-1
 // 	}
 // }
+
+function grandure() {
+	let c = [60,-60];
+	c = random(c);
+	print(c);
+	for(i=0; i<2; i++){
+		for(let y =round(random(0,windowHeight/2 +75)); y>=0 && y<=windowHeight/2 +75; y+c){
+			for(let x =round(random(0,windowWidth/2 +75)); x>=0 && x<=windowWidth/2 +75; x+c){
+				rect(x,y);
+			}
+		}
+	}
+}
